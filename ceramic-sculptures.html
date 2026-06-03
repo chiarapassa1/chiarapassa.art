@@ -49,18 +49,25 @@
     .hero {
       min-height: 85vh;
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 0.8fr 1.2fr;
       gap: 70px;
       align-items: center;
     }
 
-    h1 {
+    h1, h2 {
       font-family: Georgia, 'Times New Roman', serif;
-      font-size: clamp(64px, 10vw, 160px);
       font-weight: 400;
-      line-height: 0.9;
       letter-spacing: -0.06em;
+      line-height: 0.9;
       margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(64px, 10vw, 160px);
+    }
+
+    h2 {
+      font-size: clamp(44px, 7vw, 120px);
     }
 
     .intro {
@@ -78,15 +85,7 @@
       display: grid;
       grid-template-columns: 0.7fr 1.3fr;
       gap: 60px;
-    }
-
-    h2 {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: clamp(36px, 5vw, 82px);
-      font-weight: 400;
-      letter-spacing: -0.04em;
-      line-height: 1;
-      margin: 0;
+      align-items: start;
     }
 
     p {
@@ -95,29 +94,33 @@
       margin-top: 0;
     }
 
-    .small {
-      font-size: 15px;
-      color: var(--muted);
-      max-width: 620px;
-    }
-
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 48px;
-    }
-
-    figure {
-      margin: 0;
+    .full-image {
+      margin: 80px 0 0;
       border-top: 1px solid var(--line);
-      padding-top: 16px;
+      padding-top: 18px;
     }
 
-    figure img {
+    .full-image img {
       width: 100%;
       display: block;
-      background: #e8e3db;
+    }
+
+    .image-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 28px;
+    }
+
+    .image-row figure {
+      margin: 0;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .image-row img {
+      width: 100%;
+      display: block;
     }
 
     figcaption {
@@ -144,8 +147,13 @@
 
       .hero,
       .section-grid,
-      .image-grid {
+      .image-row {
         grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 90px 0;
       }
     }
   </style>
@@ -164,7 +172,7 @@
       <section class="hero">
         <h1>Ceramic<br>Sculptures</h1>
         <div class="intro">
-          Object Oriented Stones, Object (RE) Orinted Debis, etc...
+          Object Oriented Stones, Object Re-Oriented Debris and other ceramic states within an ongoing sculptural ecosystem.
         </div>
       </section>
 
@@ -172,43 +180,30 @@
         <div class="section-grid">
           <h2>From digital sculpture to ceramic matter and vice versa</h2>
           <div>
-            <p>The ceramic sculptures are not separate from the digital sculptures: they are material states of the same process, where virtual form becomes object, and the object becomes fluid surface and animated behavior.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="section-grid">
-          <h2>Selected works</h2>
-          <div>
             <p>
-              Add here documentation of ceramic works, studio views, installation images and details.
+              The ceramic sculptures are not separate from the digital sculptures: they are material states of the same process, where virtual form becomes object, and the object becomes fluid surface and animated behavior.
             </p>
-
-            <div class="image-grid">
-              <figure>
-                <img src="oos-ceramics-chiara-passa-(18).jpg" alt="Ceramic sculpture by Chiara Passa">
-                <figcaption>Title, year — ceramic sculpture.</figcaption>
-              </figure>
-
-              <figure>
-                <img src="images/ceramic-02.jpg" alt="Ceramic sculpture by Chiara Passa">
-                <figcaption>Title, year — ceramic sculpture.</figcaption>
-              </figure>
-
-              <figure>
-                <img src="images/ceramic-03.jpg" alt="Ceramic sculpture by Chiara Passa">
-                <figcaption>Title, year — ceramic sculpture.</figcaption>
-              </figure>
-
-              <figure>
-                <img src="images/ceramic-04.jpg" alt="Ceramic sculpture by Chiara Passa">
-                <figcaption>Title, year — ceramic sculpture.</figcaption>
-              </figure>
-            </div>
           </div>
         </div>
+
+        <figure class="full-image">
+          <img src="oos-ceramics-chiara-passa-(18).jpg" alt="Ceramic sculpture by Chiara Passa">
+          <figcaption>Object Oriented Sculptures — ceramic state.</figcaption>
+        </figure>
+
+        <div class="image-row">
+          <figure>
+            <img src="oos-ceramics-chiara-passa-(15).jpg" alt="Ceramic sculpture detail by Chiara Passa">
+          </figure>
+
+          <figure>
+            <img src="oos-ceramics-chiara-passa-(16).jpg" alt="Ceramic sculpture detail by Chiara Passa">
+          </figure>
+        </div>
+
+        <figure class="full-image">
+          <img src="oos-ceramics-chiara-passa-(17).jpg" alt="Ceramic sculpture by Chiara Passa">
+        </figure>
       </section>
 
     </main>
