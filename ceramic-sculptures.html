@@ -96,31 +96,13 @@
       margin-top: 0;
     }
 
-    .full-image {
-      margin: 56px 0 0;
-      border-top: 1px solid var(--line);
-      padding-top: 18px;
-    }
-
-    .full-image img {
-      width: 100%;
-      display: block;
-    }
-
-    .image-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      margin-top: 28px;
-    }
-
-    .image-row figure {
+    figure {
       margin: 0;
       border-top: 1px solid var(--line);
       padding-top: 18px;
     }
 
-    .image-row img {
+    figure img {
       width: 100%;
       display: block;
     }
@@ -129,6 +111,25 @@
       margin-top: 12px;
       font-size: 14px;
       color: var(--muted);
+    }
+
+    .full-image {
+      margin-top: 56px;
+    }
+
+    .image-row,
+    .image-row-3 {
+      display: grid;
+      gap: 28px;
+      margin-top: 28px;
+    }
+
+    .image-row {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .image-row-3 {
+      grid-template-columns: repeat(3, 1fr);
     }
 
     footer {
@@ -149,7 +150,8 @@
 
       .hero,
       .section-grid,
-      .image-row {
+      .image-row,
+      .image-row-3 {
         grid-template-columns: 1fr;
       }
 
@@ -208,6 +210,20 @@
 
           <figure>
             <img src="oos-ceramics-chiara-passa-(16).jpg" alt="Ceramic sculpture detail by Chiara Passa">
+          </figure>
+        </div>
+
+        <div class="image-row-3">
+          <figure>
+            <img src="oos-ceramics-chiara-passa-(17).jpg" alt="Ceramic sculpture by Chiara Passa">
+          </figure>
+
+          <figure>
+            <img src="oos-ceramics-chiara-passa-(19).jpg" alt="Ceramic sculpture by Chiara Passa">
+          </figure>
+
+          <figure>
+            <img src="oos-ceramics-chiara-passa-(18).jpg" alt="Ceramic sculpture by Chiara Passa">
           </figure>
         </div>
 
