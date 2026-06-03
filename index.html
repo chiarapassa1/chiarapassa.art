@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Object Oriented Stones — Chiara Passa</title>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #f4f1eb;
+      --text: #181818;
+      --muted: #6f6a63;
+      --line: #d8d2c8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
+    }
+
+    .page {
+      width: min(1500px, 100%);
+      margin: 0 auto;
+      padding: 32px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 22px;
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(56px, 9vw, 150px);
+      font-weight: 400;
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+      margin: 0;
+    }
+
+    .subtitle {
+      margin-top: 28px;
+      max-width: 560px;
+      font-size: clamp(20px, 2vw, 32px);
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--text);
+    }
+
+    .meta {
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    model-viewer {
+  width: 100%;
+  height: 78vh;
+  min-height: 520px;
+  background: transparent;
+  --poster-color: transparent;
+}
+
+    section {
+      border-top: 1px solid var(--line);
+      padding: 90px 0;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 60px;
+    }
+
+    h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(36px, 5vw, 82px);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin: 0;
+    }
+
+    p {
+      font-size: clamp(18px, 1.5vw, 24px);
+      max-width: 820px;
+      margin-top: 0;
+    }
+
+    .small {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 620px;
+    }
+
+    .states {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-top: 50px;
+    }
+
+    .state {
+      border: 1px solid var(--line);
+      padding: 24px;
+      min-height: 160px;
+      display: flex;
+      align-items: flex-end;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 24px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 40px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        padding: 20px;
+      }
+
+      header {
+        align-items: flex-start;
+        gap: 16px;
+        flex-direction: column;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 16px;
+      }
+
+      .hero,
+      .section-grid {
+        grid-template-columns: 1fr;
+      }
+
+      model-viewer {
+        height: 58vh;
+      }
+
+      .states {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <div>Chiara Passa</div>
+      <nav>
+        <a href="#process">Process</a>
+        <a href="#states">States</a>
+        <a href="#archive">Archive</a>
+        <a href="https://www.chiarapassa.it" target="_blank">Main Site</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Object<br>Oriented<br>Stones</h1>
+          <div class="subtitle">
+            Physical and digital sculptures, 2018–ongoing.
+          </div>
+          <div class="meta">
+            Ceramic matter · 3D bodies · interactive sculpture · augmented reality · blockchain editions
+          </div>
+        </div>
+
+        <model-viewer
+  src="./object-oriented-stone.glb"
+  alt="Object Oriented Stone 3D sculpture by Chiara Passa"
+  auto-rotate
+  auto-rotate-delay="0"
+  rotation-per-second="12deg"
+  camera-controls
+  interaction-prompt="none"
+  loading="eager"
+  reveal="auto"
+  shadow-intensity="0.35"
+  exposure="1.2"
+  camera-orbit="0deg 70deg 120%"
+  camera-target="0m 0m 0m"
+  field-of-view="28deg"
+  min-camera-orbit="auto auto 60%"
+  max-camera-orbit="auto auto 220%">
+</model-viewer>
+
+      </section>
+
+      <section id="process">
+        <div class="section-grid">
+          <h2>A long sculptural process</h2>
+          <div>
+            <p>
+              Object Oriented Stones is an ongoing body of sculptural works that unfolds across physical matter and digital environments.
+              Ceramic objects, virtual forms, augmented reality experiences and blockchain-based editions are interconnected manifestations
+              of the same sculptural ecosystem.
+            </p>
+            <p class="small">
+              The project follows the stone as an unstable entity: modelled, rendered, animated, exhibited, collected, tokenized and returned
+              to matter through physical sculpture.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="states">
+        <div class="section-grid">
+          <h2>Sculptural states</h2>
+          <div>
+            <p>
+              The work does not exist in a single medium. It migrates between object, image, interface, environment and archive.
+            </p>
+
+            <div class="states">
+              <div class="state">Ceramic<br>sculptures</div>
+              <div class="state">Digital<br>3D forms</div>
+              <div class="state">Interactive<br>bodies</div>
+              <div class="state">Augmented<br>reality</div>
+              <div class="state">NFT<br>editions</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="archive">
+        <div class="section-grid">
+          <h2>Archive</h2>
+          <div>
+            <p>
+              The blockchain layer functions as a distributed archive of the project: a way to preserve, circulate and collect different states
+              of the sculptural process.
+            </p>
+            <p class="small">
+              Objkt archive: 
+              <a href="https://objkt.com/users/tz1d7W6HtnRgNeDg4PtsQRJ6s4MvTLyphLGr" target="_blank">
+                Object Oriented Stones on Objkt
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © Chiara Passa · Object Oriented Stones · chiarapassa.art
+    </footer>
+
+  </div>
+</body>
+</html>
