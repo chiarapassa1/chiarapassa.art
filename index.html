@@ -130,14 +130,26 @@
     }
 
     .state {
-      border: 1px solid var(--line);
-      padding: 24px;
-      min-height: 160px;
-      display: flex;
-      align-items: flex-end;
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 24px;
-    }
+  border: 1px solid var(--line);
+  padding: 24px;
+  min-height: 160px;
+  display: flex;
+  align-items: flex-end;
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 24px;
+
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.state:hover {
+  background: var(--text);
+  color: var(--bg);
+}
 
     footer {
       border-top: 1px solid var(--line);
