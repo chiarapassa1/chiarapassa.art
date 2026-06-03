@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ceramic Sculptures — Chiara Passa</title>
+
+  <style>
+    :root {
+      --bg: #f4f1eb;
+      --text: #181818;
+      --muted: #6f6a63;
+      --line: #d8d2c8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
+    }
+
+    .page {
+      width: min(1500px, 100%);
+      margin: 0 auto;
+      padding: 32px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+    }
+
+    header a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(64px, 10vw, 160px);
+      font-weight: 400;
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+      margin: 0;
+    }
+
+    .intro {
+      font-size: clamp(22px, 2vw, 34px);
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 760px;
+    }
+
+    section {
+      border-top: 1px solid var(--line);
+      padding: 90px 0;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 60px;
+    }
+
+    h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(36px, 5vw, 82px);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin: 0;
+    }
+
+    p {
+      font-size: clamp(18px, 1.5vw, 24px);
+      max-width: 820px;
+      margin-top: 0;
+    }
+
+    .small {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 620px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    figure {
+      margin: 0;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+    }
+
+    figure img {
+      width: 100%;
+      display: block;
+      background: #e8e3db;
+    }
+
+    figcaption {
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 40px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .page { padding: 20px; }
+
+      header {
+        align-items: flex-start;
+        gap: 16px;
+        flex-direction: column;
+      }
+
+      .hero,
+      .section-grid,
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <a href="index.html">Chiara Passa</a>
+      <a href="index.html#states">Back to sculptural states</a>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <h1>Ceramic<br>Sculptures</h1>
+        <div class="intro">
+          Object Oriented Stones, Object (RE) Orinted Debis, etc...
+        </div>
+      </section>
+
+      <section>
+        <div class="section-grid">
+          <h2>From digital sculpture to ceramic matter and vice versa</h2>
+          <div>
+            <p>The ceramic sculptures are not separate from the digital sculptures: they are material states of the same process, where virtual form becomes object, and the object becomes fluid surface and animated behavior.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-grid">
+          <h2>Selected works</h2>
+          <div>
+            <p>
+              Add here documentation of ceramic works, studio views, installation images and details.
+            </p>
+
+            <div class="image-grid">
+              <figure>
+                <img src="images/ceramic-01.jpg" alt="Ceramic sculpture by Chiara Passa">
+                <figcaption>Title, year — ceramic sculpture.</figcaption>
+              </figure>
+
+              <figure>
+                <img src="images/ceramic-02.jpg" alt="Ceramic sculpture by Chiara Passa">
+                <figcaption>Title, year — ceramic sculpture.</figcaption>
+              </figure>
+
+              <figure>
+                <img src="images/ceramic-03.jpg" alt="Ceramic sculpture by Chiara Passa">
+                <figcaption>Title, year — ceramic sculpture.</figcaption>
+              </figure>
+
+              <figure>
+                <img src="images/ceramic-04.jpg" alt="Ceramic sculpture by Chiara Passa">
+                <figcaption>Title, year — ceramic sculpture.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © Chiara Passa · Object Oriented Sculptures · chiarapassa.art
+    </footer>
+
+  </div>
+</body>
+</html>
