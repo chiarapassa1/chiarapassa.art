@@ -24,10 +24,11 @@
     }
 
     .page {
-      width: min(1500px, 100%);
-      margin: 0 auto;
-      padding: 32px;
-    }
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 32px clamp(24px,4vw,60px);
+}
 
     header {
       display: flex;
