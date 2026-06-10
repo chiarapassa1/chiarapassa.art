@@ -28,10 +28,13 @@
     }
 
     .page {
-      width: min(1500px, 100%);
-      margin: 0 auto;
-      padding: 32px;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 32px clamp(24px, 4vw, 60px);
     }
+
+    /* ── Header ── */
 
     header {
       display: flex;
@@ -50,6 +53,8 @@
       text-decoration: none;
       margin-left: 22px;
     }
+
+    /* ── Hero ── */
 
     .hero {
       min-height: 100vh;
@@ -83,12 +88,14 @@
     }
 
     model-viewer {
-  width: 100%;
-  height: 90vh;
-  min-height: 520px;
-  background: transparent;
-  --poster-color: transparent;
-}
+      width: 100%;
+      height: 90vh;
+      min-height: 520px;
+      background: transparent;
+      --poster-color: transparent;
+    }
+
+    /* ── Sections ── */
 
     section {
       border-top: 1px solid var(--line);
@@ -100,6 +107,8 @@
       grid-template-columns: 0.7fr 1.3fr;
       gap: 60px;
     }
+
+    /* ── Typography ── */
 
     h2 {
       font-family: Georgia, 'Times New Roman', serif;
@@ -122,6 +131,8 @@
       max-width: 620px;
     }
 
+    /* ── Sculptural states ── */
+
     .states {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -130,30 +141,27 @@
     }
 
     .state {
-  border: 1px solid var(--line);
-  padding: 24px;
-  min-height: 160px;
+      border: 1px solid var(--line);
+      padding: 24px;
+      min-height: 160px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 24px;
+      color: var(--text);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    .state:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
 
-  text-align: center;
-
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 24px;
-
-  color: var(--text);
-  text-decoration: none;
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-}
-
-.state:hover {
-  background: var(--text);
-  color: var(--bg);
-}
+    /* ── Footer ── */
 
     footer {
       border-top: 1px solid var(--line);
@@ -161,6 +169,8 @@
       color: var(--muted);
       font-size: 14px;
     }
+
+    /* ── Responsive ── */
 
     @media (max-width: 900px) {
       .page {
@@ -199,14 +209,17 @@
 
     <header>
       <div>Chiara Passa</div>
+      <nav>
         <a href="#process">Process</a>
         <a href="#states">States</a>
         <a href="#conservation">Conservation</a>
         <a href="https://www.chiarapassa.it" target="_blank">Main Site</a>
+      </nav>
     </header>
 
     <main>
 
+      <!-- Hero -->
       <section class="hero">
         <div class="hero-text">
           <h1>Object<br>Oriented<br>Sculptures</h1>
@@ -219,34 +232,34 @@
         </div>
 
         <model-viewer
-  src="./object-oriented-stone.glb"
-  alt="Object Oriented Stone 3D sculpture by Chiara Passa"
-  auto-rotate
-  auto-rotate-delay="0"
-  rotation-per-second="10deg"
-  camera-controls
-  interaction-prompt="none"
-  loading="eager"
-  reveal="auto"
-  shadow-intensity="0"
-  shadow-softness="0"
-  exposure="1.2"
-  camera-orbit="0deg 70deg 105%"
-  camera-target="0m 0m 0m"
-  field-of-view="24deg"
-  min-camera-orbit="auto auto 60%"
-  max-camera-orbit="auto auto 220%">
-</model-viewer>
-
+          src="./object-oriented-stone.glb"
+          alt="Object Oriented Stone 3D sculpture by Chiara Passa"
+          auto-rotate
+          auto-rotate-delay="0"
+          rotation-per-second="10deg"
+          camera-controls
+          interaction-prompt="none"
+          loading="eager"
+          reveal="auto"
+          shadow-intensity="0"
+          shadow-softness="0"
+          exposure="1.2"
+          camera-orbit="0deg 70deg 105%"
+          camera-target="0m 0m 0m"
+          field-of-view="24deg"
+          min-camera-orbit="auto auto 60%"
+          max-camera-orbit="auto auto 220%">
+        </model-viewer>
       </section>
 
+      <!-- Process -->
       <section id="process">
         <div class="section-grid">
           <h2>A long sculptural process between Digital and Matter</h2>
           <div>
             <p>
               Object Oriented Sculptures is an ongoing body of sculptural works that unfolds across physical matter and digital environments. Since 2017, the project has reimagined lithic forms through processes of interactive digital metamorphosis. Ceramic objects, virtual forms, augmented reality experiences and blockchain-based editions emerge as interconnected manifestations of the same sculptural ecosystem.
-              Each sculpture acts as a portal into abstract chromatic landscapes, continuously reshaped by interaction and computational processes. Through algorithmic systems and digital environments, the work investigates how sculpture can evolve beyond fixed material boundaries into dynamic and participatory states. 
+              Each sculpture acts as a portal into abstract chromatic landscapes, continuously reshaped by interaction and computational processes. Through algorithmic systems and digital environments, the work investigates how sculpture can evolve beyond fixed material boundaries into dynamic and participatory states.
             </p>
             <p class="small">
               The project approaches matter as an unstable entity: modelled, rendered, animated, exhibited, collected, tokenized and ultimately returned to physical form through sculpture.
@@ -255,6 +268,7 @@
         </div>
       </section>
 
+      <!-- States -->
       <section id="states">
         <div class="section-grid">
           <h2>Sculptural states</h2>
@@ -262,7 +276,6 @@
             <p>
               The work does not exist in a single medium. It migrates between object, image, interface, environment and archive.
             </p>
-
             <div class="states">
               <a class="state" href="ceramic-sculptures.html">Ceramic<br>sculptures</a>
               <div class="state">Digital<br>3D forms</div>
@@ -274,24 +287,25 @@
         </div>
       </section>
 
-     <section id="conservation">
-  <div class="section-grid">
-    <h2>Digital Art Conservation</h2>
-    <div>
-      <p>
-        My research extends beyond artistic production into the preservation of digital cultural heritage.
-        Through blockchain technologies, SmartPy development and decentralized infrastructures, I explore
-        new models for documenting, conserving and maintaining digital and generative artworks across time.
-      </p>
-      <p class="small">
-        Related research:
-        <a href="https://github.com/chiarapassa1/generative-art-conservation-fa2" target="_blank">
-          Generative Art Conservation Framework — SmartPy implementation
-        </a>
-      </p>
-    </div>
-  </div>
-</section>
+      <!-- Conservation -->
+      <section id="conservation">
+        <div class="section-grid">
+          <h2>Digital Art Conservation</h2>
+          <div>
+            <p>
+              My research extends beyond artistic production into the preservation of digital cultural heritage.
+              Through blockchain technologies, SmartPy development and decentralized infrastructures, I explore
+              new models for documenting, conserving and maintaining digital and generative artworks across time.
+            </p>
+            <p class="small">
+              Related research:
+              <a href="https://github.com/chiarapassa1/generative-art-conservation-fa2" target="_blank">
+                Generative Art Conservation Framework — SmartPy implementation
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
 
     </main>
 
