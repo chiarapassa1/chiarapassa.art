@@ -34,8 +34,6 @@
       padding: 32px clamp(24px, 4vw, 60px);
     }
 
-    /* ── Header ── */
-
     header {
       display: flex;
       justify-content: space-between;
@@ -53,8 +51,6 @@
       text-decoration: none;
       margin-left: 22px;
     }
-
-    /* ── Hero ── */
 
     .hero {
       min-height: 100vh;
@@ -95,8 +91,6 @@
       --poster-color: transparent;
     }
 
-    /* ── Sections ── */
-
     section {
       border-top: 1px solid var(--line);
       padding: 90px 0;
@@ -107,8 +101,6 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
     }
-
-    /* ── Typography ── */
 
     h2 {
       font-family: Georgia, 'Times New Roman', serif;
@@ -130,8 +122,6 @@
       color: var(--muted);
       max-width: 620px;
     }
-
-    /* ── Sculptural states ── */
 
     .states {
       display: grid;
@@ -161,7 +151,9 @@
       color: var(--bg);
     }
 
-    /* ── Footer ── */
+    .state:visited {
+      color: var(--text);
+    }
 
     footer {
       border-top: 1px solid var(--line);
@@ -169,8 +161,6 @@
       color: var(--muted);
       font-size: 14px;
     }
-
-    /* ── Responsive ── */
 
     @media (max-width: 900px) {
       .page {
@@ -213,13 +203,12 @@
         <a href="#process">Process</a>
         <a href="#states">States</a>
         <a href="#conservation">Conservation</a>
-        <a href="https://www.chiarapassa.it" target="_blank">Main Site</a>
+        <a href="https://www.chiarapassa.it" target="_blank" rel="noopener">Main Site</a>
       </nav>
     </header>
 
     <main>
 
-      <!-- Hero -->
       <section class="hero">
         <div class="hero-text">
           <h1>Object<br>Oriented<br>Sculptures</h1>
@@ -252,7 +241,6 @@
         </model-viewer>
       </section>
 
-      <!-- Process -->
       <section id="process">
         <div class="section-grid">
           <h2>A long sculptural process between Digital and Matter</h2>
@@ -268,7 +256,6 @@
         </div>
       </section>
 
-      <!-- States -->
       <section id="states">
         <div class="section-grid">
           <h2>Sculptural states</h2>
@@ -276,18 +263,37 @@
             <p>
               The work does not exist in a single medium. It migrates between object, image, interface, environment and archive.
             </p>
+
             <div class="states">
-              <a class="state" href="ceramic-sculptures.html">Ceramic<br>sculptures</a>
-              <div class="state">Digital<br>3D forms</div>
-              <div class="state">Interactive and generative<br>sculptures</div>
-              <div class="state">Augmented and virtual<br>reality</div>
-              <div class="state">NFT<br>editions</div>
+              <a class="state" href="ceramic-sculptures.html">
+                Ceramic<br>sculptures
+              </a>
+
+              <a class="state" href="digital-forms.html">
+                Digital<br>Forms
+              </a>
+
+              <a class="state" href="interactive-generative-sculptures.html">
+                Interactive and generative<br>sculptures
+              </a>
+
+              <a class="state" href="augmented-virtual-reality.html">
+                Augmented and virtual<br>reality
+              </a>
+
+              <a
+                class="state"
+                href="https://objkt.com/users/tz1d7W6HtnRgNeDg4PtsQRJ6s4MvTLyphLGr"
+                target="_blank"
+                rel="noopener"
+              >
+                NFT<br>editions
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Conservation -->
       <section id="conservation">
         <div class="section-grid">
           <h2>Digital Art Conservation</h2>
@@ -299,7 +305,7 @@
             </p>
             <p class="small">
               Related research:
-              <a href="https://github.com/chiarapassa1/generative-art-conservation-fa2" target="_blank">
+              <a href="https://github.com/chiarapassa1/generative-art-conservation-fa2" target="_blank" rel="noopener">
                 Generative Art Conservation Framework — SmartPy implementation
               </a>
             </p>
@@ -310,7 +316,7 @@
     </main>
 
     <footer>
-      © Chiara Passa · Object Oriented Stones · chiarapassa.art
+      © Chiara Passa · Object Oriented Sculptures · chiarapassa.art
     </footer>
 
   </div>
