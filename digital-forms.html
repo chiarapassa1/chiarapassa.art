@@ -32,8 +32,6 @@
       padding: 32px clamp(24px, 4vw, 60px);
     }
 
-    /* ── Header ── */
-
     header {
       display: flex;
       justify-content: space-between;
@@ -50,8 +48,6 @@
       color: var(--muted);
       text-decoration: none;
     }
-
-    /* ── Typography ── */
 
     h1,
     h2 {
@@ -83,8 +79,6 @@
       max-width: 760px;
     }
 
-    /* ── Layout ── */
-
     .hero {
       min-height: 55vh;
       display: grid;
@@ -106,8 +100,6 @@
       align-items: start;
     }
 
-    /* ── Figures ── */
-
     figure {
       margin: 0;
       border-top: 1px solid var(--line);
@@ -117,6 +109,7 @@
     figure img,
     figure video {
       width: 100%;
+      height: auto;
       display: block;
     }
 
@@ -130,12 +123,9 @@
       margin-top: 56px;
     }
 
-    /* ── Image grids ── */
-
     .image-row,
     .image-row-2,
-    .image-row-3,
-    .image-row-4 {
+    .image-row-3 {
       display: grid;
       gap: 28px;
       margin-top: 28px;
@@ -150,19 +140,13 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
-    .image-row-4 {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .image-row-3 img,
-    .image-row-4 img {
+    .image-row img,
+    .image-row-2 img,
+    .image-row-3 img {
       width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
+      height: auto;
       display: block;
     }
-
-    /* ── Footer ── */
 
     footer {
       border-top: 1px solid var(--line);
@@ -170,8 +154,6 @@
       color: var(--muted);
       font-size: 14px;
     }
-
-    /* ── Responsive ── */
 
     @media (max-width: 900px) {
       .page {
@@ -188,8 +170,7 @@
       .section-grid,
       .image-row,
       .image-row-2,
-      .image-row-3,
-      .image-row-4 {
+      .image-row-3 {
         grid-template-columns: 1fr;
       }
 
@@ -205,11 +186,6 @@
       h2 {
         font-size: clamp(36px, 10vw, 60px);
       }
-
-      .image-row-3 img,
-      .image-row-4 img {
-        aspect-ratio: auto;
-      }
     }
   </style>
 </head>
@@ -224,7 +200,6 @@
 
     <main>
 
-      <!-- Hero -->
       <section class="hero">
         <h1>Digital<br>Forms</h1>
         <div class="intro">
@@ -232,14 +207,13 @@
         </div>
       </section>
 
-      <!-- Main content -->
       <section>
 
         <div class="section-grid">
           <h2>Neither sketch nor simulation</h2>
           <div>
             <p>
-             The digital 3D forms are not preliminary sketches or simulations. They are sculptural states in their own right, equal in weight to any physical form. A series of interactive 3D sculptures that reimagine ancient solid materials as fluid, mutable entities, revealing an alternative, visionary side of the mineral world.
+              The digital 3D forms are not preliminary sketches or simulations. They are sculptural states in their own right, equal in weight to any physical form. A series of interactive 3D sculptures that reimagine ancient solid materials as fluid, mutable entities, revealing an alternative, visionary side of the mineral world.
             </p>
           </div>
         </div>
@@ -266,7 +240,7 @@
           <figcaption>Virtual matter, chromatic surface, computational form.</figcaption>
         </figure>
 
-        <div class="image-row">
+        <div class="image-row-2">
           <figure>
             <img src="digital-3d-forms-chiara-passa-(06).jpg" alt="Digital 3D sculpture by Chiara Passa">
           </figure>
@@ -275,20 +249,22 @@
           </figure>
         </div>
 
-        <div class="image-row-4">
-          <figure>
-            <img src="digital-3d-forms-chiara-passa-(08).jpg" alt="Digital 3D sculpture by Chiara Passa">
-          </figure>
+        <figure class="full-image">
+          <img src="digital-3d-forms-chiara-passa-(08).jpg" alt="Digital 3D sculpture by Chiara Passa">
+        </figure>
+
+        <div class="image-row-2">
           <figure>
             <img src="digital-3d-forms-chiara-passa-(09).jpg" alt="Digital 3D sculpture by Chiara Passa">
           </figure>
           <figure>
             <img src="digital-3d-forms-chiara-passa-(10).jpg" alt="Digital 3D sculpture by Chiara Passa">
           </figure>
-          <figure>
-            <img src="digital-3d-forms-chiara-passa-(11).jpg" alt="Digital 3D sculpture by Chiara Passa">
-          </figure>
         </div>
+
+        <figure class="full-image">
+          <img src="digital-3d-forms-chiara-passa-(11).jpg" alt="Digital 3D sculpture by Chiara Passa">
+        </figure>
 
         <figure class="full-image">
           <img src="digital-3d-forms-chiara-passa-(12).jpg" alt="Digital 3D sculpture by Chiara Passa">
