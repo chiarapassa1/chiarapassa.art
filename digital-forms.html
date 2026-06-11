@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Forms — Chiara Passa</title>
+
+  <style>
+    :root {
+      --bg: #f4f1eb;
+      --text: #181818;
+      --muted: #6f6a63;
+      --line: #d8d2c8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
+    }
+
+    .page {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 32px clamp(24px, 4vw, 60px);
+    }
+
+    /* ── Header ── */
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+    }
+
+    header a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    /* ── Typography ── */
+
+    h1,
+    h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-weight: 400;
+      letter-spacing: -0.06em;
+      line-height: 0.9;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(64px, 9vw, 140px);
+    }
+
+    h2 {
+      font-size: clamp(36px, 4.5vw, 68px);
+      max-width: 900px;
+    }
+
+    p {
+      font-size: clamp(18px, 1.35vw, 22px);
+      max-width: none;
+      margin-top: 0;
+    }
+
+    .intro {
+      font-size: clamp(22px, 2vw, 34px);
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 760px;
+    }
+
+    /* ── Layout ── */
+
+    .hero {
+      min-height: 55vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 80px 0;
+    }
+
+    section {
+      border-top: 1px solid var(--line);
+      padding: 64px 0;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    /* ── Figures ── */
+
+    figure {
+      margin: 0;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    figure img,
+    figure video {
+      width: 100%;
+      display: block;
+    }
+
+    figcaption {
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .full-image {
+      margin-top: 56px;
+    }
+
+    /* ── Image grids ── */
+
+    .image-row,
+    .image-row-2,
+    .image-row-3,
+    .image-row-4 {
+      display: grid;
+      gap: 28px;
+      margin-top: 28px;
+    }
+
+    .image-row,
+    .image-row-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .image-row-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .image-row-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .image-row-3 img,
+    .image-row-4 img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── Footer ── */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 40px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ── Responsive ── */
+
+    @media (max-width: 900px) {
+      .page {
+        padding: 20px;
+      }
+
+      header {
+        align-items: flex-start;
+        gap: 16px;
+        flex-direction: column;
+      }
+
+      .hero,
+      .section-grid,
+      .image-row,
+      .image-row-2,
+      .image-row-3,
+      .image-row-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 70px 0;
+      }
+
+      h1 {
+        font-size: clamp(58px, 16vw, 96px);
+      }
+
+      h2 {
+        font-size: clamp(36px, 10vw, 60px);
+      }
+
+      .image-row-3 img,
+      .image-row-4 img {
+        aspect-ratio: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <a href="index.html">Chiara Passa</a>
+      <a href="index.html#states">Back to sculptural states</a>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+      <section class="hero">
+        <h1>Digital<br>Forms</h1>
+        <div class="intro">
+          Ancient materials, digital metamorphosis. Sculptures that exist between the weight of stone and the fluidity of code.
+        </div>
+      </section>
+
+      <!-- Main content -->
+      <section>
+
+        <div class="section-grid">
+          <h2>Neither sketch nor simulation</h2>
+          <div>
+            <p>
+             The digital 3D forms are not preliminary sketches or simulations. They are sculptural states in their own right, equal in weight to any physical form. A series of interactive 3D sculptures that reimagine ancient solid materials as fluid, mutable entities, revealing an alternative, visionary side of the mineral world.
+            </p>
+          </div>
+        </div>
+
+        <figure class="full-image">
+          <img src="digital-3d-forms-chiara-passa-(01).jpg" alt="Digital 3D sculpture by Chiara Passa">
+          <figcaption>Object Oriented Sculptures — digital state.</figcaption>
+        </figure>
+
+        <div class="image-row-3">
+          <figure>
+            <img src="digital-3d-forms-chiara-passa-(02).jpg" alt="Digital 3D sculpture by Chiara Passa">
+          </figure>
+          <figure>
+            <img src="digital-3d-forms-chiara-passa-(03).jpg" alt="Digital 3D sculpture by Chiara Passa">
+          </figure>
+          <figure>
+            <img src="digital-3d-forms-chiara-passa-(04).jpg" alt="Digital 3D sculpture by Chiara Passa">
+          </figure>
+        </div>
+
+        <figure class="full-image">
+          <img src="digital-3d-forms-chiara-passa-(05).jpg" alt="Digital 3D sculpture by Chiara Passa">
+          <figcaption>Virtual matter, chromatic surface, computational form.</figcaption>
+        </figure>
+
+        <div class="image-row">
+          <figure>
+            <img src="digital-3d-forms-chiara-passa-(06).jpg" alt="Digital 3D sculpture by Chiara Passa">
+          </figure>
+          <figure>
+            <img src="digital-3d-forms-chiara-passa-(07).jpg" alt="Digital 3D sculpture by Chiara Passa">
+          </figure>
+        </div>
+
+        <div class="image-row-4">
+          <figure>
+            <img src="digital-3d-forms-chiara-passa-(08).jpg" alt="Digital 3D sculpture by Chiara Passa">
+          </figure>
+          <figure>
+            <img src="digital-3d-forms-chiara-passa-(09).jpg" alt="Digital 3D sculpture by Chiara Passa">
+          </figure>
+          <figure>
+            <img src="digital-3d-forms-chiara-passa-(10).jpg" alt="Digital 3D sculpture by Chiara Passa">
+          </figure>
+          <figure>
+            <img src="digital-3d-forms-chiara-passa-(11).jpg" alt="Digital 3D sculpture by Chiara Passa">
+          </figure>
+        </div>
+
+        <figure class="full-image">
+          <img src="digital-3d-forms-chiara-passa-(12).jpg" alt="Digital 3D sculpture by Chiara Passa">
+        </figure>
+
+      </section>
+
+    </main>
+
+    <footer>
+      © Chiara Passa · Object Oriented Sculptures · chiarapassa.art
+    </footer>
+
+  </div>
+</body>
+</html>
