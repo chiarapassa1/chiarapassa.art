@@ -36,8 +36,9 @@
     max-width: none;
     margin: 0;
     padding: 32px clamp(24px, 4vw, 60px);
-    overflow-x: hidden;
   }
+
+  /* ── Header ── */
 
   header {
     display: flex;
@@ -55,6 +56,8 @@
     color: var(--muted);
     text-decoration: none;
   }
+
+  /* ── Typography ── */
 
   h1,
   h2 {
@@ -86,6 +89,8 @@
     max-width: 760px;
   }
 
+  /* ── Layout ── */
+
   .hero {
     min-height: 55vh;
     display: grid;
@@ -107,17 +112,17 @@
     align-items: start;
   }
 
+  /* ── Figures ── */
+
   figure {
     margin: 0;
     border-top: 1px solid var(--line);
     padding-top: 18px;
-    overflow: hidden;
   }
 
   figure img,
   figure video {
     width: 100%;
-    max-width: 100%;
     height: auto;
     display: block;
   }
@@ -132,32 +137,34 @@
     margin-top: 56px;
   }
 
+  /* ── Image grids ── */
+
   .image-row,
   .image-row-2,
   .image-row-3 {
     display: grid;
     gap: 28px;
     margin-top: 28px;
-    width: 100%;
   }
 
   .image-row,
   .image-row-2 {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 
   .image-row-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .image-row img,
   .image-row-2 img,
   .image-row-3 img {
     width: 100%;
-    max-width: 100%;
     height: auto;
     display: block;
   }
+
+  /* ── Footer ── */
 
   footer {
     border-top: 1px solid var(--line);
@@ -165,6 +172,8 @@
     color: var(--muted);
     font-size: 14px;
   }
+
+  /* ── Responsive ── */
 
   @media (max-width: 900px) {
     .page {
