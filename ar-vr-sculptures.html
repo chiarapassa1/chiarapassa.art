@@ -5,203 +5,200 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Augmented and Virtual Reality — Chiara Passa</title>
 
-  <style>
-    :root {
-      --bg: #f4f1eb;
-      --text: #181818;
-      --muted: #6f6a63;
-      --line: #d8d2c8;
-    }
+ <style>
+  :root {
+    --bg: #f4f1eb;
+    --text: #181818;
+    --muted: #6f6a63;
+    --line: #d8d2c8;
+  }
 
-    * {
-      box-sizing: border-box;
-    }
+  * {
+    box-sizing: border-box;
+  }
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.45;
-    }
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
 
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.45;
+  }
+
+  .page {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 32px clamp(24px, 4vw, 60px);
+    overflow-x: hidden;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 18px;
+  }
+
+  header a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  h1,
+  h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    line-height: 0.9;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: clamp(64px, 9vw, 140px);
+  }
+
+  h2 {
+    font-size: clamp(36px, 4.5vw, 68px);
+    max-width: 900px;
+  }
+
+  p {
+    font-size: clamp(18px, 1.35vw, 22px);
+    max-width: none;
+    margin-top: 0;
+  }
+
+  .intro {
+    font-size: clamp(22px, 2vw, 34px);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 760px;
+  }
+
+  .hero {
+    min-height: 55vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    padding: 80px 0;
+  }
+
+  section {
+    border-top: 1px solid var(--line);
+    padding: 64px 0;
+  }
+
+  .section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  figure {
+    margin: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+    overflow: hidden;
+  }
+
+  figure img,
+  figure video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  figcaption {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .full-image {
+    margin-top: 56px;
+  }
+
+  .image-row,
+  .image-row-2,
+  .image-row-3 {
+    display: grid;
+    gap: 28px;
+    margin-top: 28px;
+    width: 100%;
+  }
+
+  .image-row,
+  .image-row-2 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .image-row-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .image-row img,
+  .image-row-2 img,
+  .image-row-3 img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 40px 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 900px) {
     .page {
-      width: 100%;
-      max-width: none;
-      margin: 0;
-      padding: 32px clamp(24px, 4vw, 60px);
+      padding: 20px;
     }
-
-    /* ── Header ── */
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 13px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--muted);
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 18px;
+      align-items: flex-start;
+      gap: 16px;
+      flex-direction: column;
     }
 
-    header a {
-      color: var(--muted);
-      text-decoration: none;
-    }
-
-    /* ── Typography ── */
-
-    h1,
-    h2 {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-weight: 400;
-      letter-spacing: -0.06em;
-      line-height: 0.9;
-      margin: 0;
-    }
-
-    h1 {
-      font-size: clamp(64px, 9vw, 140px);
-    }
-
-    h2 {
-      font-size: clamp(36px, 4.5vw, 68px);
-      max-width: 900px;
-    }
-
-    p {
-      font-size: clamp(18px, 1.35vw, 22px);
-      max-width: none;
-      margin-top: 0;
-    }
-
-    .intro {
-      font-size: clamp(22px, 2vw, 34px);
-      font-family: Georgia, 'Times New Roman', serif;
-      max-width: 760px;
-    }
-
-    /* ── Layout ── */
-
-    .hero {
-      min-height: 55vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-      padding: 80px 0;
-    }
-
-    section {
-      border-top: 1px solid var(--line);
-      padding: 64px 0;
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    /* ── Figures ── */
-
-    figure {
-      margin: 0;
-      border-top: 1px solid var(--line);
-      padding-top: 18px;
-    }
-
-    figure img,
-    figure video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    figcaption {
-      margin-top: 12px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .full-image {
-      margin-top: 56px;
-    }
-
-    /* ── Image grids ── */
-
+    .hero,
+    .section-grid,
     .image-row,
     .image-row-2,
     .image-row-3 {
-      display: grid;
-      gap: 28px;
-      margin-top: 28px;
+      grid-template-columns: 1fr;
     }
 
-    .image-row,
-    .image-row-2 {
-      grid-template-columns: 1fr 1fr;
+    .hero {
+      min-height: auto;
+      padding: 70px 0;
     }
 
-    .image-row-3 {
-      grid-template-columns: repeat(3, 1fr);
+    h1 {
+      font-size: clamp(58px, 16vw, 96px);
     }
 
-    .image-row img,
-    .image-row-2 img,
-    .image-row-3 img {
-      width: 100%;
-      height: auto;
-      display: block;
+    h2 {
+      font-size: clamp(36px, 10vw, 60px);
     }
-
-    /* ── Footer ── */
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 40px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* ── Responsive ── */
-
-    @media (max-width: 900px) {
-      .page {
-        padding: 20px;
-      }
-
-      header {
-        align-items: flex-start;
-        gap: 16px;
-        flex-direction: column;
-      }
-
-      .hero,
-      .section-grid,
-      .image-row,
-      .image-row-2,
-      .image-row-3 {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 70px 0;
-      }
-
-      h1 {
-        font-size: clamp(58px, 16vw, 96px);
-      }
-
-      h2 {
-        font-size: clamp(36px, 10vw, 60px);
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
