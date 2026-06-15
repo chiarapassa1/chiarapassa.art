@@ -84,12 +84,25 @@
     }
 
     model-viewer {
-      width: 100%;
-      height: 90vh;
-      min-height: 520px;
-      background: transparent;
-      --poster-color: transparent;
-    }
+  width: 100%;
+  height: 90vh;
+  min-height: 520px;
+
+  background: transparent !important;
+  border: none;
+  outline: none;
+
+  --poster-color: transparent;
+  --progress-bar-color: transparent;
+}
+
+model-viewer::part(default-progress-bar) {
+  display: none;
+}
+
+model-viewer::part(default-progress-mask) {
+  display: none;
+}
 
     section {
       border-top: 1px solid var(--line);
