@@ -114,10 +114,22 @@
     }
 
     figcaption {
-      margin-top: 12px;
-      font-size: 14px;
-      color: var(--muted);
-    }
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+figcaption a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 8px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+figcaption a:hover {
+  border-bottom-color: var(--muted);
+}
 
     .full-image {
       margin-top: 56px;
