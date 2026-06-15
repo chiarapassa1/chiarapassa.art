@@ -128,10 +128,22 @@
   }
 
   figcaption {
-    margin-top: 12px;
-    font-size: 14px;
-    color: var(--muted);
-  }
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+figcaption a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 8px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+figcaption a:hover {
+  border-bottom-color: var(--muted);
+}
 
   .full-image {
     margin-top: 56px;
@@ -247,7 +259,7 @@
 
         <figure class="full-image">
           <img src="AR-Chiara-Passa (9).jpg" alt="AR sculpture by Chiara Passa">
-          <figcaption>Object Oriented Stones AR, 2021.</figcaption>
+          <figcaption>Object Oriented Stones AR, 2021. <a href="https://www.youtube.com/watch?v=qjvqW25QytM" target="_blank" rel="Video Sneak-peek">↗</a></figcaption>
         </figure>
 
         <div class="image-row-2">
