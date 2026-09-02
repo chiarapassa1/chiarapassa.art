@@ -146,37 +146,26 @@ figcaption a:hover {
       margin-top: 56px;
     }
 
-    /* ── Video embed (Shorts, vertical 9:16) ── */
+    /* ── Video lightbox ── */
 
-    .video-embed {
+    .video-trigger {
       position: relative;
-      width: 100%;
-      max-width: 220px;
-      aspect-ratio: 9 / 16;
-      margin: 18px auto 0;
-      overflow: hidden;
-      background: #000;
       cursor: pointer;
+      margin-top: 18px;
     }
 
-    .video-embed iframe,
-    .video-embed img.video-thumb {
-      position: absolute;
-      inset: 0;
+    .video-trigger img {
       width: 100%;
-      height: 100%;
-      border: 0;
       display: block;
-      object-fit: cover;
     }
 
-    .video-embed .play-btn {
+    .video-trigger .play-btn {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 44px;
-      height: 44px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
       background: rgba(0, 0, 0, 0.65);
       display: flex;
@@ -185,12 +174,55 @@ figcaption a:hover {
       pointer-events: none;
     }
 
-    .video-embed .play-btn::after {
+    .video-trigger .play-btn::after {
       content: "";
       border-style: solid;
-      border-width: 8px 0 8px 13px;
+      border-width: 11px 0 11px 18px;
       border-color: transparent transparent transparent #fff;
-      margin-left: 3px;
+      margin-left: 4px;
+    }
+
+    .video-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 8, 6, 0.92);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-lightbox.open {
+      display: flex;
+    }
+
+    .video-lightbox .lightbox-inner {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 9 / 16;
+    }
+
+    .video-lightbox iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-lightbox .close-btn {
+      position: absolute;
+      top: -44px;
+      right: 0;
+      width: 32px;
+      height: 32px;
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 28px;
+      line-height: 1;
+      cursor: pointer;
     }
 
     /* ── Image grids ── */
@@ -311,8 +343,8 @@ figcaption a:hover {
         <figure class="full-image">
           <img src="oos-ceramics-chiara-passa-(22).jpg" alt="Ceramic sculpture by Chiara Passa">
           <figcaption>Object (RE) Oriented Debris, interactive sculptures 2025.</figcaption>
-          <div class="video-embed" onclick="this.innerHTML='&lt;iframe src=&quot;https://www.youtube.com/embed/y31rUbfN_vA?autoplay=1&quot; title=&quot;Object (RE) Oriented Debris — video sneak-peek&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;/iframe&gt;'">
-            <img class="video-thumb" src="https://img.youtube.com/vi/y31rUbfN_vA/hqdefault.jpg" alt="Video sneak-peek thumbnail" loading="lazy">
+          <div class="video-trigger" onclick="openVideoLightbox()">
+            <img src="https://img.youtube.com/vi/y31rUbfN_vA/hqdefault.jpg" alt="Video sneak-peek thumbnail" loading="lazy">
             <span class="play-btn"></span>
           </div>
         </figure>
@@ -567,5 +599,25 @@ figcaption a:hover {
     </footer>
 
   </div>
+
+  <!-- Video lightbox -->
+  <div class="video-lightbox" id="videoLightbox" onclick="if(event.target===this) closeVideoLightbox()">
+    <div class="lightbox-inner">
+      <button class="close-btn" onclick="closeVideoLightbox()" aria-label="Close video">&times;</button>
+      <div id="videoLightboxContent"></div>
+    </div>
+  </div>
+
+  <script>
+    function openVideoLightbox() {
+      document.getElementById('videoLightboxContent').innerHTML =
+        '<iframe src="https://www.youtube.com/embed/y31rUbfN_vA?autoplay=1" title="Object (RE) Oriented Debris — video sneak-peek" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+      document.getElementById('videoLightbox').classList.add('open');
+    }
+    function closeVideoLightbox() {
+      document.getElementById('videoLightbox').classList.remove('open');
+      document.getElementById('videoLightboxContent').innerHTML = '';
+    }
+  </script>
 </body>
 </html>
