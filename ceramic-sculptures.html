@@ -146,6 +146,53 @@ figcaption a:hover {
       margin-top: 56px;
     }
 
+    /* ── Video embed (Shorts, vertical 9:16) ── */
+
+    .video-embed {
+      position: relative;
+      width: 100%;
+      max-width: 220px;
+      aspect-ratio: 9 / 16;
+      margin: 18px auto 0;
+      overflow: hidden;
+      background: #000;
+      cursor: pointer;
+    }
+
+    .video-embed iframe,
+    .video-embed img.video-thumb {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      object-fit: cover;
+    }
+
+    .video-embed .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .video-embed .play-btn::after {
+      content: "";
+      border-style: solid;
+      border-width: 8px 0 8px 13px;
+      border-color: transparent transparent transparent #fff;
+      margin-left: 3px;
+    }
+
     /* ── Image grids ── */
 
     .image-row,
@@ -263,11 +310,11 @@ figcaption a:hover {
 
         <figure class="full-image">
           <img src="oos-ceramics-chiara-passa-(22).jpg" alt="Ceramic sculpture by Chiara Passa">
-          <figcaption>Object (RE) Oriented Debris, interactive sculptures 2025.<a href="https://www.youtube.com/shorts/y31rUbfN_vA"
-     target="_blank"
-     rel="noopener">
-     Video sneak-peek ↗
-  </a></figcaption>
+          <figcaption>Object (RE) Oriented Debris, interactive sculptures 2025.</figcaption>
+          <div class="video-embed" onclick="this.innerHTML='&lt;iframe src=&quot;https://www.youtube.com/embed/y31rUbfN_vA?autoplay=1&quot; title=&quot;Object (RE) Oriented Debris — video sneak-peek&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen&gt;&lt;/iframe&gt;'">
+            <img class="video-thumb" src="https://img.youtube.com/vi/y31rUbfN_vA/hqdefault.jpg" alt="Video sneak-peek thumbnail" loading="lazy">
+            <span class="play-btn"></span>
+          </div>
         </figure>
 
         <div class="image-row-4">
