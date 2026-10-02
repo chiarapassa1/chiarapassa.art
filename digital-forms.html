@@ -136,26 +136,14 @@
       border-bottom-color: var(--muted);
     }
 
-    /* Video embed: same width as the other images, natural 16:9 height.
-       The iframe is slightly oversized so the thin dark edge of the
-       YouTube player is cropped out. */
     .video-embed {
       margin-top: 28px;
     }
 
-    .video-embed .frame {
-      position: relative;
-      overflow: hidden;
+    .video-embed iframe {
+      display: block;
+      width: 100%;
       aspect-ratio: 16 / 9;
-      background: var(--bg);
-    }
-
-    .video-embed .frame iframe {
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      width: calc(100% + 4px);
-      height: calc(100% + 4px);
       border: 0;
     }
 
@@ -263,15 +251,13 @@
         </figure>
 
         <figure class="video-embed">
-          <div class="frame">
-            <iframe
-              src="https://www.youtube.com/embed/AHCrGjQrh3w?si=Xg45IbKmPVVqK7ea"
-              title="Object (RE) Oriented Debris, preview video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
-          </div>
+          <iframe
+            src="https://www.youtube.com/embed/AHCrGjQrh3w?si=Xg45IbKmPVVqK7ea"
+            title="Object (RE) Oriented Debris, preview video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
           <figcaption>Object (RE) Oriented Debris, 2024. Preview video.</figcaption>
         </figure>
 
