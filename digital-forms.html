@@ -136,17 +136,29 @@
       border-bottom-color: var(--muted);
     }
 
-   .video-embed {
-  margin-top: 28px;
-}
+    /* Video embed: same width as the other images, natural 16:9 height.
+       The iframe is slightly oversized so the thin dark edge of the
+       YouTube player is cropped out. */
+    .video-embed {
+      margin-top: 28px;
+    }
 
-.video-embed iframe {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
+    .video-embed .frame {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: var(--bg);
+    }
+
+   .video-embed .frame iframe {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
   border: 0;
 }
-
+    
     .full-image {
       margin-top: 56px;
     }
@@ -251,15 +263,17 @@
         </figure>
 
         <figure class="video-embed">
-  <iframe
-    src="https://www.youtube.com/embed/AHCrGjQrh3w?si=Xg45IbKmPVVqK7ea"
-    title="Object (RE) Oriented Debris, preview video"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen></iframe>
-  <figcaption>Object (RE) Oriented Debris, 2024. Preview video.</figcaption>
-</figure>
+          <div class="frame">
+            <iframe
+              src="https://www.youtube.com/embed/AHCrGjQrh3w?si=Xg45IbKmPVVqK7ea"
+              title="Object (RE) Oriented Debris, preview video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <figcaption>Object (RE) Oriented Debris, 2024. Preview video.</figcaption>
+        </figure>
 
         <div class="image-row-3">
           <figure>
