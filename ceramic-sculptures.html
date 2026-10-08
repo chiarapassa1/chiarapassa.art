@@ -343,7 +343,7 @@ figcaption a:hover {
         <figure class="full-image">
           <img src="oos-ceramics-chiara-passa-(22).jpg" alt="Ceramic sculpture by Chiara Passa">
           <figcaption>Object (RE) Oriented Debris, interactive sculptures 2025.</figcaption>
-          <div class="video-trigger" onclick="openVideoLightbox()">
+          <div class="video-trigger" onclick="openVideoLightbox('y31rUbfN_vA')">
             <img src="silent-ood-passa-cover.jpg" alt="Object (RE) Oriented Debris — video sneak-peek cover" loading="lazy">
             <span class="play-btn"></span>
           </div>
@@ -412,9 +412,13 @@ figcaption a:hover {
         <!-- Object Oriented Stones -->
 
         <figure class="full-image">
-          <img src="oos-ceramics-chiara-passa-(34).jpg" alt="Ceramic sculpture by Chiara Passa">
-          <figcaption>Object (RE) Oriented Debris 2024.</figcaption>
-        </figure>
+  <img src="oos-ceramics-chiara-passa-(34).jpg" alt="Ceramic sculpture by Chiara Passa">
+  <figcaption>Object (RE) Oriented Debris 2.2, interactive sculptures 2024.</figcaption>
+  <div class="video-trigger" onclick="openVideoLightbox('y3TxkfvWxdM')">
+    <img src="COVER-oos-ceramics-chiara-passa-(34).jpg" alt="Object (RE) Oriented Debris 2.2 — video sneak-peek cover" loading="lazy">
+    <span class="play-btn"></span>
+  </div>
+</figure>
 
         <div class="image-row-3">
           <figure>
@@ -609,15 +613,15 @@ figcaption a:hover {
   </div>
 
   <script>
-    function openVideoLightbox() {
-      document.getElementById('videoLightboxContent').innerHTML =
-        '<iframe src="https://www.youtube.com/embed/y31rUbfN_vA?autoplay=1" title="Object (RE) Oriented Debris — video sneak-peek" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-      document.getElementById('videoLightbox').classList.add('open');
-    }
-    function closeVideoLightbox() {
-      document.getElementById('videoLightbox').classList.remove('open');
-      document.getElementById('videoLightboxContent').innerHTML = '';
-    }
-  </script>
+  function openVideoLightbox(videoId) {
+    document.getElementById('videoLightboxContent').innerHTML =
+      '<iframe src="https://www.youtube.com/embed/' + videoId + '?autoplay=1" title="Object (RE) Oriented Debris — video sneak-peek" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    document.getElementById('videoLightbox').classList.add('open');
+  }
+  function closeVideoLightbox() {
+    document.getElementById('videoLightbox').classList.remove('open');
+    document.getElementById('videoLightboxContent').innerHTML = '';
+  }
+</script>
 </body>
 </html>
