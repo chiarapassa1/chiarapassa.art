@@ -197,11 +197,17 @@ figcaption a:hover {
     }
 
     .video-lightbox .lightbox-inner {
-      position: relative;
-      width: 100%;
-      max-width: 360px;
-      aspect-ratio: 9 / 16;
-    }
+  position: relative;
+  width: min(92vw, calc(85vh * 9 / 16));
+  width: min(92vw, calc(85dvh * 9 / 16));
+  aspect-ratio: 9 / 16;
+}
+
+    .video-lightbox .lightbox-inner.landscape {
+  width: min(92vw, 1200px, calc(85vh * 16 / 9));
+  width: min(92vw, 1200px, calc(85dvh * 16 / 9));
+  aspect-ratio: 16 / 9;
+}
 
     .video-lightbox iframe {
       position: absolute;
@@ -612,10 +618,12 @@ figcaption a:hover {
     </div>
   </div>
 
-  <script>
-  function openVideoLightbox(videoId) {
+ <script>
+  function openVideoLightbox(videoId, format) {
+    document.querySelector('#videoLightbox .lightbox-inner')
+      .classList.toggle('landscape', format === 'landscape');
     document.getElementById('videoLightboxContent').innerHTML =
-      '<iframe src="https://www.youtube.com/embed/' + videoId + '?autoplay=1" title="Object (RE) Oriented Debris — video sneak-peek" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+      '<iframe src="https://www.youtube.com/embed/' + videoId + '?autoplay=1" title="Video sneak-peek" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
     document.getElementById('videoLightbox').classList.add('open');
   }
   function closeVideoLightbox() {
